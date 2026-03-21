@@ -1,0 +1,11 @@
+[window]
+opacity = 0.7
+[font]
+
+size = 14.0
+
+[font.normal]
+family = "Iosevka Nerd Font Mono"
+style = "Regular"
+[terminal]
+shell = "/home/chucky/.cargo/bin/zellij"
