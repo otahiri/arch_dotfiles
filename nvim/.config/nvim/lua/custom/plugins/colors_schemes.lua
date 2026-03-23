@@ -1,6 +1,5 @@
 return {
 	"sainnhe/everforest",
-	"cocopon/iceberg.vim",
 	"marko-cerovac/material.nvim",
 	"oahlen/iceberg.nvim",
 	"rose-pine/neovim",
@@ -32,7 +31,6 @@ return {
 		config = function()
 		    local themes = {
 			"everforest",
-			"iceberg",
 			"material-palenight",
 			"material-oceanic",
 			"material-deep-ocean",

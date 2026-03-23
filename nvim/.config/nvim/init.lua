@@ -598,6 +598,10 @@ require('lazy').setup({
         clangd = {},
         pyright = {},
         rust_analyzer = {},
+        qmlls = {
+          cmd = { 'qmlls6' },
+          filetypes = { 'qml', 'qmljs' },
+        },
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
         --    https://github.com/pmizio/typescript-tools.nvim
@@ -773,6 +777,9 @@ require('lazy').setup({
         -- By default, you may press `<c-space>` to show the documentation.
         -- Optionally, set `auto_show = true` to show the documentation after a delay.
         documentation = { auto_show = false, auto_show_delay_ms = 500 },
+        trigger = {
+          show_on_insert_on_trigger_character = true,
+        },
       },
 
       sources = {

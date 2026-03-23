@@ -10,6 +10,10 @@ return {
     local ret = {
       servers = {
     rust_analyzer = {},
+    qmlls = {
+          cmd = { "qmlls" },
+          filetypes = { "qml", "qmljs" },
+        },
         ['*'] = {
           keys = {
             { '<leader>cl', function() Snacks.picker.lsp_config() end, desc = 'Lsp Info' },
