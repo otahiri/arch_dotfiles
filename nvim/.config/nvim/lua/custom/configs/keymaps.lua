@@ -82,6 +82,9 @@ vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, { desc = "rename var" })
 vim.keymap.set("n", "<leader>fh", function()
 	vim.cmd 'silent! Telescope help_tags'
 end, { desc = "search help page" })
+vim.keymap.set("n", "<leader>fg",  function ()
+	vim.cmd 'silent! Telescope live_grep'
+end)
 
 vim.keymap.set({ "x", "o" }, "af", function()
 	require("nvim-treesitter-textobjects.select").select_textobject("@function.outer", "textobjects")

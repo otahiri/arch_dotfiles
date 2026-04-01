@@ -184,7 +184,11 @@ vim.diagnostic.config {
   virtual_lines = false, -- Teest shows up underneath the line, with virtual lines
 
   -- Auto open the float, so you can easily read the errors when jumping with `[d` and `]d`
-  jump = { float = true },
+  jump = {
+    on_jump = function()
+
+  end
+},
 }
 
 -- vim.keymap.set('n', '<leader>cl', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
@@ -937,7 +941,7 @@ require('lazy').setup({
 require 'custom.configs.keymaps'
 require 'custom.configs.autocmd'
 require('mini.pairs').setup()
-vim.lsp.set_log_level("error")  -- Reduce LSP verbosity
+vim.lsp.log.set_level("error")  -- Reduce LSP verbosity
 -- Set timeout for LSP requests (in ms)
 vim.o.timeout = true
 vim.o.timeoutlen = 3000
