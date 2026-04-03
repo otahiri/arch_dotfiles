@@ -51,13 +51,7 @@ vim.keymap.set("n", "<leader>e", function()
 	else
 		Snacks.explorer.reveal()
 	end
-end)
-vim.keymap.set("n", "L", function()
-	vim.cmd("silent! BufferLineCycleNext")
-end)
-vim.keymap.set("n", "H", function()
-	vim.cmd("silent! BufferLineCyclePrev")
-end)
+end, { desc = "open file explorer" })
 vim.keymap.set("n", "<F1>", header)
 
 vim.keymap.set("n", "<leader>cl", function()
@@ -84,7 +78,7 @@ vim.keymap.set("n", "<leader>fh", function()
 end, { desc = "search help page" })
 vim.keymap.set("n", "<leader>fg",  function ()
 	vim.cmd 'silent! Telescope live_grep'
-end)
+end, { desc = "live grep current directory" })
 
 vim.keymap.set({ "x", "o" }, "af", function()
 	require("nvim-treesitter-textobjects.select").select_textobject("@function.outer", "textobjects")

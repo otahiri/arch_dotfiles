@@ -787,7 +787,7 @@ require('lazy').setup({
       },
 
       sources = {
-        default = { 'lsp', 'path', 'snippets' },
+        default = { 'lsp', 'path', 'snippets', 'buffer' },
       },
 
       snippets = { preset = 'luasnip' },
@@ -945,6 +945,14 @@ vim.lsp.log.set_level("error")  -- Reduce LSP verbosity
 -- Set timeout for LSP requests (in ms)
 vim.o.timeout = true
 vim.o.timeoutlen = 3000
+
+vim.api.nvim_create_autocmd('InsertLeave', {
+  callback = function()
+    if require('luasnip').session.current_nodes[vim.api.nvim_get_current_buf()] then
+      require('luasnip').unlink_current()
+    end
+  end,
+})
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

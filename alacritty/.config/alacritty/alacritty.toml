@@ -1,5 +1,6 @@
 [window]
 opacity = 0.7
+startup_mode = "Fullscreen"
 [font]
 
 size = 14.0
@@ -8,4 +9,4 @@ size = 14.0
 family = "Iosevka Nerd Font Mono"
 style = "Regular"
 [terminal]
-shell = "/home/chucky/.cargo/bin/zellij"
+shell = "zellij"
