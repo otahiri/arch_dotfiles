@@ -142,3 +142,39 @@ vim.keymap.set("n", "<leader>tr", function()
 	vim.cmd("colorscheme " .. random_theme)
 	print("Switched to: " .. random_theme)
 end, { desc = "Theme Reroll (Random)" })
+-- Store the textobjects move module in a local variable for readability
+local ts_move = require("nvim-treesitter-textobjects.move")
+
+-- Optional helper to make the mapping lines shorter and add descriptions
+local map = function(keys, func, desc)
+  vim.keymap.set({ "n", "x", "o" }, keys, func, { desc = desc })
+end
+
+--- === JUMP FORWARD (Next) === ---
+
+-- 1. Jump to the START of the next object
+map("]f", function() ts_move.goto_next_start("@function.outer", "textobjects") end, "Next function start")
+map("]a", function() ts_move.goto_next_start("@parameter.inner", "textobjects") end, "Next argument start")
+map("]c", function() ts_move.goto_next_start("@class.outer", "textobjects") end, "Next class start")
+map("]l", function() ts_move.goto_next_start("@loop.outer", "textobjects") end, "Next loop start")
+
+-- 2. Jump to the END of the next object
+map("]F", function() ts_move.goto_next_end("@function.outer", "textobjects") end, "Next function end")
+map("]A", function() ts_move.goto_next_end("@parameter.inner", "textobjects") end, "Next argument end")
+map("]C", function() ts_move.goto_next_end("@class.outer", "textobjects") end, "Next class end")
+map("]L", function() ts_move.goto_next_end("@loop.outer", "textobjects") end, "Next loop end")
+
+
+--- === JUMP BACKWARD (Previous) === ---
+
+-- 3. Jump to the START of the previous object
+map("[f", function() ts_move.goto_previous_start("@function.outer", "textobjects") end, "Previous function start")
+map("[a", function() ts_move.goto_previous_start("@parameter.inner", "textobjects") end, "Previous argument start")
+map("[c", function() ts_move.goto_previous_start("@class.outer", "textobjects") end, "Previous class start")
+map("[l", function() ts_move.goto_previous_start("@loop.outer", "textobjects") end, "Previous loop start")
+
+-- 4. Jump to the END of the previous object
+map("[F", function() ts_move.goto_previous_end("@function.outer", "textobjects") end, "Previous function end")
+map("[A", function() ts_move.goto_previous_end("@parameter.inner", "textobjects") end, "Previous argument end")
+map("[C", function() ts_move.goto_previous_end("@class.outer", "textobjects") end, "Previous class end")
+map("[L", function() ts_move.goto_previous_end("@loop.outer", "textobjects") end, "Previous loop end")
