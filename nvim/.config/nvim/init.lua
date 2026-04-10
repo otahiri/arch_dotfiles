@@ -957,3 +957,11 @@ vim.api.nvim_create_autocmd('InsertLeave', {
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
   -- You can also pass a list to group multiple queries.
+vim.opt.statusline:append("  %{strftime('%I:%M:%S %p')}")
+local timer = vim.uv.new_timer()
+
+if timer then
+  timer:start(0, 1000, vim.schedule_wrap(function()
+    vim.cmd("silent! redrawstatus")
+  end))
+end
