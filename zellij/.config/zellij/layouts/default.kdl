@@ -1,0 +1,14 @@
+layout {
+    pane size=1 split_direction="vertical" {
+        pane size="75%" borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane size="25%" borderless=true {
+            plugin location="file:/home/$USER/.config/zellij/plugins/zellij-datetime.wasm"
+        }
+    }
+    pane
+    pane size=1 borderless=true {
+        plugin location="zellij:status-bar"
+    }
+}

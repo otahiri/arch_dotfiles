@@ -1,6 +1,16 @@
 layout {
-    pane size=1 borderless=true {
-        plugin location="compact-bar"
+
+    tab name="nvim" focus=true {
+        pane size=1 borderless=true {
+            plugin location="compact-bar"
+        }
+        pane
     }
-    pane
+
+    tab name="term" {
+        pane size=1 borderless=true {
+            plugin location="compact-bar"
+        }
+        pane
+    }
 }
