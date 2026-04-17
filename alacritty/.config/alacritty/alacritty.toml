@@ -8,5 +8,6 @@ size = 14.0
 [font.normal]
 family = "Iosevka Nerd Font Mono"
 style = "Regular"
+
 [terminal]
-shell = "zellij"
+program = "zsh -lc zellij"
