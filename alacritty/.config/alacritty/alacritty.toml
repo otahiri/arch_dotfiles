@@ -10,4 +10,4 @@ family = "Iosevka Nerd Font Mono"
 style = "Regular"
 
 [terminal]
-program = "zsh -lc zellij"
+shell = "zellij"

@@ -12,15 +12,6 @@ local function header()
 	end
 end
 
-local function format()
-	local name = vim.fn.expand("%:e")
-	if name == "c" or name == "h" then
-		vim.cmd("silent! CFormat")
-	elseif name == "py" then
-		vim.cmd("silent! Format")
-	end
-end
-
 vim.keymap.set("n", "<leader>w", function()
 	vim.cmd("silent! w")
 end, { desc = "save file" })
@@ -43,7 +34,6 @@ vim.keymap.set("n", "<leader>fn", function()
 	vim.cmd("silent! ene |startinsert")
 end, { desc = "open new file" })
 vim.keymap.set("n", "<F1>", header)
-vim.keymap.set("n", "<leader>cf", format, { desc = "format file" })
 vim.keymap.set("n", "<leader>e", function()
 	local explorer = Snacks.picker.get({ source = "explorer" })[1]
 	if explorer then
@@ -178,3 +168,22 @@ map("[F", function() ts_move.goto_previous_end("@function.outer", "textobjects")
 map("[A", function() ts_move.goto_previous_end("@parameter.inner", "textobjects") end, "Previous argument end")
 map("[C", function() ts_move.goto_previous_end("@class.outer", "textobjects") end, "Previous class end")
 map("[L", function() ts_move.goto_previous_end("@loop.outer", "textobjects") end, "Previous loop end")
+-- Toggle the Spectre UI
+vim.keymap.set('n', '<leader>S', '<cmd>lua require("spectre").toggle()<CR>', {
+    desc = "Toggle Spectre"
+})
+
+-- Search the current word your cursor is on across the whole project
+vim.keymap.set('n', '<leader>sw', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', {
+    desc = "Search current word"
+})
+
+-- Search the exact text you highlighted in visual mode
+vim.keymap.set('v', '<leader>sw', '<esc><cmd>lua require("spectre").open_visual()<CR>', {
+    desc = "Search current word"
+})
+
+-- switch color scheme using themery
+vim.keymap.set("n", "<leader>tc",  function ()
+	vim.cmd 'silent! Themery'
+end, { desc = "toggle themery" })

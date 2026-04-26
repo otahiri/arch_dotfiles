@@ -28,6 +28,7 @@ return {
 	"tomasr/molokai",
 	"rakr/vim-one",
 	"mhartington/oceanic-next",
+	"olimorris/onedarkpro.nvim",
 	{
 		"EdenEast/nightfox.nvim",
 		lazy = false,
@@ -65,6 +66,10 @@ return {
 			"molokai",
 			"one",
 			"OceanicNext",
+			"vaporwave",
+			"onedark",
+			"onedark_vivid",
+			"onedark_dark",
 		    }
 		    math.randomseed(os.time())
 		    local random_theme = themes[math.random(#themes)]
