@@ -1,9 +1,16 @@
+local function len(l)
+   local count = 0
+   for _ in pairs(l) do
+      count = count + 1
+   end
+   return count
+end
+
 return {
         "zaldih/themery.nvim",
         lazy = false,
         config = function()
-	    require("themery").setup({
-	      themes = {
+		local my_themes = {
 			"material-palenight",
 			"material-oceanic",
 			"material-deep-ocean",
@@ -39,8 +46,15 @@ return {
 			"onedark",
 			"onedark_vivid",
 			"onedark_dark",
-	},
-	      livePreview = true,
-	    })
+		}
+		local themery = require('themery')
+		themery.setup({
+	     		themes = my_themes,
+			livePreview = true,
+	    	})
+		math.randomseed(os.time())
+		local rand = math.random(#my_themes)
+		print(rand)
+		themery.setThemeByIndex(rand, false)
         end
 }

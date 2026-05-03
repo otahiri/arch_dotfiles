@@ -10,6 +10,7 @@ return {
     local ret = {
       servers = {
     rust_analyzer = {},
+    python = {"pyright"},
     qmlls = {
           cmd = { "qmlls" },
           filetypes = { "qml", "qmljs" },
