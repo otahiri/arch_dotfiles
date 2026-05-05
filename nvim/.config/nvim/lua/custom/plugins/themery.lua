@@ -1,11 +1,3 @@
-local function len(l)
-   local count = 0
-   for _ in pairs(l) do
-      count = count + 1
-   end
-   return count
-end
-
 return {
         "zaldih/themery.nvim",
         lazy = false,
