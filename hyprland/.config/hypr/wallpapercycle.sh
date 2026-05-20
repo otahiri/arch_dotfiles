@@ -1,6 +1,6 @@
 #!/bin/bash
 set -euo pipefail
-DIR="$HOME/images/BG/"
+DIR="$HOME/Picture/BG/"
 
 while true; do
     pic=$(find "$DIR" -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' \) | shuf -n 1)
