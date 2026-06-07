@@ -631,6 +631,7 @@ require("lazy").setup({
 					cmd = { "qmlls6" },
 					filetypes = { "qml", "qmljs" },
 				},
+				bashls = {},
 				--
 				-- Some languages (like typescript) have entire language plugins that can be useful:
 				--    https://github.com/pmizio/typescript-tools.nvim
