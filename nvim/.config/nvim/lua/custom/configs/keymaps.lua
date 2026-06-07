@@ -66,7 +66,6 @@ vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, { desc = "rename var" })
 vim.keymap.set("n", "<leader>fh", function()
 	vim.cmd 'silent! Telescope help_tags'
 end, { desc = "search help page" })
-vim.keymap.set("n", "<leader>fp", function() vim.cmd 'silent! DevdocsOpen python-3.10' end, {desc = "grep python docs"})
 vim.keymap.set("n", "<leader>fg",  function ()
 	vim.cmd 'silent! Telescope live_grep'
 end, { desc = "live grep current directory" })
