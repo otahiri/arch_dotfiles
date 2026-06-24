@@ -63,7 +63,7 @@ vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "code action
 vim.keymap.set("n", "<leader>cR", function()
 	Snacks.rename.rename_file()
 end, { desc = "rename file" })
-vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, { desc = "rename var" })
+vim.keymap.set("n", "<leader>cr", function() vim.cmd 'lua vim.lsp.buf.rename()' end, { desc = "rename var" })
 vim.keymap.set("n", "<leader>fh", function()
 	vim.cmd 'silent! Telescope help_tags'
 end, { desc = "search help page" })

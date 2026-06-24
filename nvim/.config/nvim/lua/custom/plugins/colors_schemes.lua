@@ -7,6 +7,8 @@ return {
 	"atmosuwiryo/vim-winteriscoming",
 	"oxfist/night-owl.nvim",
 	"scottmckendry/cyberdream.nvim",
+	"raphamorim/lucario",
+	"sainnhe/sonokai",
 	{
 		"getomni/neovim",
     		name = "omni",

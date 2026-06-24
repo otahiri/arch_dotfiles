@@ -3,5 +3,8 @@
 --
 -- See the kickstart.nvim README for more information
 return {
-	{ "typicode/bg.nvim", lazy = false },
+	{
+		"typicode/bg.nvim",
+		event="VeryLazy",
+	},
 }

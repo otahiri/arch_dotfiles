@@ -3,6 +3,8 @@ return {
         lazy = false,
         config = function()
 		local my_themes = {
+			"lucario",
+			"sonokai",
 			"material-palenight",
 			"material-oceanic",
 			"material-deep-ocean",
