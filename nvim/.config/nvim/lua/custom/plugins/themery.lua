@@ -4,6 +4,8 @@ return {
         config = function()
 		local my_themes = {
 			"lucario",
+			"spaceduck",
+			"srcery",
 			"sonokai",
 			"material-palenight",
 			"material-oceanic",

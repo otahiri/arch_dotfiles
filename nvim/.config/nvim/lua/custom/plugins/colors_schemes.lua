@@ -1,6 +1,7 @@
 return {
 	"marko-cerovac/material.nvim",
 	"oahlen/iceberg.nvim",
+	"pineapplegiant/spaceduck",
 	"morhetz/gruvbox",
 	"rose-pine/neovim",
 	"rebelot/kanagawa.nvim",
@@ -31,6 +32,7 @@ return {
 	"rakr/vim-one",
 	"mhartington/oceanic-next",
 	"olimorris/onedarkpro.nvim",
+	"srcery-colors/srcery-vim",
 	{
 		"EdenEast/nightfox.nvim",
 		lazy = false,
