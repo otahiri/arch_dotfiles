@@ -891,7 +891,15 @@ require("lazy").setup({
 			-- - sr)'  - [S]urround [R]eplace [)] [']
 
 			-- Simple and easy statusline.
-			require("mini.surround").setup()
+			require("mini.surround").setup({
+				mappings = {
+					add = "ys",
+					delete = "ds",
+					replace = "cs",
+					find = "gs",
+					find_left = "gS",
+				},
+			})
 			--  You could remove this setup call if you don't like it,
 			--  and try some other statusline plugin
 			local statusline = require("mini.statusline")
