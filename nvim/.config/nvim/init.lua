@@ -516,6 +516,7 @@ require("lazy").setup({
 
 			-- Allows extra capabilities provided by blink.cmp
 			"saghen/blink.cmp",
+
 		},
 		config = function()
 			-- Brief aside: **What is LSP?**
@@ -831,6 +832,20 @@ require("lazy").setup({
 
 			sources = {
 				default = { "lsp", "path", "snippets", "buffer" },
+				providers = {
+					lsp = {
+						transform_items = function(_, items)
+							for _, item in ipairs(items) do
+							  if item.label:match("=$") then
+							    item.score_offset = (item.score_offset or 0) - 5
+							  else
+							    item.score_offset = (item.score_offset or 0) + 5
+							  end
+							end
+							return items
+						      end,
+					}
+				}
 			},
 
 			snippets = { preset = "luasnip" },
