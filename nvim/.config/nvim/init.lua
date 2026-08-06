@@ -516,7 +516,6 @@ require("lazy").setup({
 
 			-- Allows extra capabilities provided by blink.cmp
 			"saghen/blink.cmp",
-
 		},
 		config = function()
 			-- Brief aside: **What is LSP?**
@@ -738,7 +737,7 @@ require("lazy").setup({
 			},
 			formatters = {
 				black = {
-					prepend_args = {'--line-length', '79'},
+					prepend_args = { "--line-length", "79" },
 				},
 			},
 		},
@@ -836,16 +835,16 @@ require("lazy").setup({
 					lsp = {
 						transform_items = function(_, items)
 							for _, item in ipairs(items) do
-							  if item.label:match("=$") then
-							    item.score_offset = (item.score_offset or 0) - 5
-							  else
-							    item.score_offset = (item.score_offset or 0) + 5
-							  end
+								if item.label:match("=$") then
+									item.score_offset = (item.score_offset or 0) - 5
+								else
+									item.score_offset = (item.score_offset or 0) + 5
+								end
 							end
 							return items
-						      end,
-					}
-				}
+						end,
+					},
+				},
 			},
 
 			snippets = { preset = "luasnip" },
@@ -892,7 +891,6 @@ require("lazy").setup({
 		dependencies = { "nvim-lua/plenary.nvim" },
 		opts = { signs = false },
 	},
-
 	{ -- Collection of various small independent plugins/modules
 		"nvim-mini/mini.nvim",
 		config = function()
@@ -902,6 +900,48 @@ require("lazy").setup({
 			--  - va)  - [V]isually select [A]round [)]paren
 			--  - yinq - [Y]ank [I]nside [N]ext [Q]uote
 			--  - ci'  - [C]hange [I]nside [']quote
+			require("mini.operators").setup({
+				evaluate = {
+					prefix = "c=",
+
+					-- Function which does the evaluation
+					func = nil,
+				},
+
+				-- Exchange text regions
+				exchange = {
+					-- NOTE: Default `gx` is remapped to `gX`
+					prefix = "cx",
+
+					-- Whether to reindent new text to match previous indent
+					reindent_linewise = true,
+				},
+
+				-- Multiply (duplicate) text
+				multiply = {
+					prefix = "cm",
+
+					-- Function which can modify text before multiplying
+					func = nil,
+				},
+
+				-- Replace text with register
+				replace = {
+					-- NOTE: Default `gr*` LSP mappings are removed
+					prefix = "cr",
+
+					-- Whether to reindent new text to match previous indent
+					reindent_linewise = true,
+				},
+
+				-- Sort text
+				sort = {
+					prefix = "cs",
+
+					-- Function which does the sort
+					func = nil,
+				},
+			})
 			require("mini.ai").setup({ n_lines = 500 })
 
 			-- Add/delete/replace surroundings (brackets, quotes, etc.)
