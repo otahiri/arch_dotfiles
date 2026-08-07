@@ -11,6 +11,10 @@
     "telescope.nvim": {
       "rev": "427b576c16792edad01a92b89721d923c19ad60f",
       "src": "https://github.com/nvim-telescope/telescope.nvim.git"
+    },
+    "tree-sitter-manager.nvim": {
+      "rev": "9dc4ffc4fb010e7abb976a92360c2c5a7d324c15",
+      "src": "https://github.com/romus204/tree-sitter-manager.nvim"
     }
   }
 }
