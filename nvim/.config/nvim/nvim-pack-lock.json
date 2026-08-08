@@ -32,6 +32,10 @@
       "rev": "8ade5cd37d12a4868b0ec891aeba88ffea3c4853",
       "src": "https://github.com/getomni/neovim"
     },
+    "gitsigns.nvim": {
+      "rev": "31d6fb2d618bca1482b9f274751ead5f03461408",
+      "src": "https://github.com/lewis6991/gitsigns.nvim"
+    },
     "gruber-darker.nvim": {
       "rev": "9b68f84bfd6c1278fef2143802ca40c60f2471c0",
       "src": "https://github.com/blazkowolf/gruber-darker.nvim"

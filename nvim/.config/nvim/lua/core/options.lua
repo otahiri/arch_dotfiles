@@ -64,3 +64,7 @@ vim.diagnostic.config({
   update_in_insert = false,
   severity_sort = true,
 })
+vim.o.relativenumber = true
+vim.o.number = true
+
+vim.opt.signcolumn = "yes"

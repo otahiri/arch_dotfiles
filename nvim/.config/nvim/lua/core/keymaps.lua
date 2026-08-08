@@ -10,4 +10,3 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highl
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "escape terminal mode" })
 vim.keymap.set("n", "<leader>cr", function() vim.lsp.buf.rename() end, { desc = "escape terminal mode" })
 vim.keymap.set("n", "<leader>tc", function () vim.cmd("silent! Themery") end , { desc = "change color scheme" })
-vim.keymap.set("n", "<leader>tc", function () vim.cmd("silent! Themery") end , { desc = "change color scheme" })

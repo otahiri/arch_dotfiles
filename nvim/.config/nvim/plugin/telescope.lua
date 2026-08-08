@@ -4,5 +4,7 @@ vim.pack.add({
 })
 
 vim.keymap.set('n', "<leader><leader>", function () vim.schedule(function() vim.cmd("Telescope find_files") end) end, {desc = "find files dir"})
-vim.keymap.set('n', "<leader>fo", function () require("telescope.builtin").oldfiles({ sorting_strategy = "ascending" }) end, {desc = "find files dir"})
-vim.keymap.set('n', "<leader>fh", function () vim.schedule(function() vim.cmd("Telescope help_tags") end) end, {desc = "find files dir"})
+vim.keymap.set('n', "<leader>fo", function () require("telescope.builtin").oldfiles({ sorting_strategy = "ascending" }) end, {desc = "open old files"})
+vim.keymap.set('n', "<leader>fh", function () vim.schedule(function() vim.cmd("Telescope help_tags") end) end, {desc = "find help"})
+vim.keymap.set('n', "<leader>ff", function () vim.schedule(function() vim.cmd("Telescope buffers") end) end, {desc = "open current buffers"})
+
