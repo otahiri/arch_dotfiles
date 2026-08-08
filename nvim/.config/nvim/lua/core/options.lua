@@ -54,3 +54,13 @@ vim.lsp.config['pyright'] = {
 
 }
 vim.lsp.enable('pyright')
+vim.diagnostic.config({
+  virtual_text = {
+    spacing = 4,
+    prefix = '●', -- Options: '■', 'x', '~', or any character you prefer
+  },
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
+})
