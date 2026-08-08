@@ -1,5 +1,10 @@
 {
   "plugins": {
+    "LuaSnip": {
+      "rev": "642b0c595e11608b4c18219e93b88d7637af27bc",
+      "src": "https://github.com/L3MON4D3/LuaSnip",
+      "version": "2.0.0 - 3.0.0"
+    },
     "blink.cmp": {
       "rev": "78336bc89ee5365633bcf754d93df01678b5c08f",
       "src": "https://github.com/saghen/blink.cmp.git"
@@ -11,6 +16,10 @@
     "bufferline.nvim": {
       "rev": "655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3",
       "src": "https://github.com/akinsho/bufferline.nvim"
+    },
+    "conform.nvim": {
+      "rev": "619363c30309d29ffa631e67c8183f2a72caa373",
+      "src": "https://github.com/stevearc/conform.nvim"
     },
     "cyberdream.nvim": {
       "rev": "d0e6e837b0248e3507f3a295deb4661221610e78",
@@ -88,6 +97,10 @@
     "monokai-pro.nvim": {
       "rev": "a68e38b8e55d69a215d0f02598900a79c356da9d",
       "src": "https://github.com/loctvl842/monokai-pro.nvim"
+    },
+    "neogen": {
+      "rev": "23e7e9f883d01289ebd90e98025acc860ea26366",
+      "src": "https://github.com/danymat/neogen"
     },
     "neovim": {
       "rev": "8ade5cd37d12a4868b0ec891aeba88ffea3c4853",
