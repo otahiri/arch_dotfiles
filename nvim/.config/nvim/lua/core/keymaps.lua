@@ -1,6 +1,6 @@
 vim.g.mapleader = ' '
 vim.keymap.set("n", "<leader>w", function()
-	vim.cmd("silent! w")
+	vim.cmd("w")
 end, { desc = "save file" })
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
 vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to lower window" })
