@@ -5,6 +5,10 @@
       "src": "https://github.com/L3MON4D3/LuaSnip",
       "version": "2.0.0 - 3.0.0"
     },
+    "Tommorow-Night": {
+      "rev": "fd25d3be7558b9f9533837f25d7b31d31438287b",
+      "src": "https://github.com/chriskempson/tomorrow-theme"
+    },
     "blink.cmp": {
       "rev": "78336bc89ee5365633bcf754d93df01678b5c08f",
       "src": "https://github.com/saghen/blink.cmp.git"
@@ -69,6 +73,10 @@
       "rev": "8f7e64066e2641d5e7d494962a9c7051e3d38dd5",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
+    "lualine.nvim": {
+      "rev": "221ce6b2d999187044529f49da6554a92f740a96",
+      "src": "https://github.com/nvim-lualine/lualine.nvim"
+    },
     "lucario": {
       "rev": "a9cf850453268d3e62d16516f92d399d3587058a",
       "src": "https://github.com/raphamorim/lucario"
@@ -125,6 +133,10 @@
     "nvim-treesitter-textobjects": {
       "rev": "898ee307df58f854d11cd7edd06472574d48014e",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
+    },
+    "nvim-web-devicons": {
+      "rev": "2ae6958df7ced50baac5035cec0c15799eedfbf7",
+      "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
     "oceanic-next": {
       "rev": "09833f72d5ba23de2e8bcae18f479f326f5f677a",
@@ -187,6 +199,10 @@
       "rev": "cdc07ac78467a233fd62c493de29a17e0cf2b2b6",
       "src": "https://github.com/folke/tokyonight.nvim"
     },
+    "tomorrow-theme": {
+      "rev": "ccf6666d888198d341b26b3a99d0bc96500ad503",
+      "src": "https://github.com/chriskempson/tomorrow-theme"
+    },
     "tree-sitter-manager.nvim": {
       "rev": "ae287204a4fe9174e82bad17c102e721e5aa8520",
       "src": "https://github.com/romus204/tree-sitter-manager.nvim"
@@ -195,9 +211,21 @@
       "rev": "126d52f4f77877385cd44d983709053d1aab6635",
       "src": "https://github.com/tyrannicaltoucan/vim-deep-space"
     },
+    "vim-moonfly-colors": {
+      "rev": "261664f92ed51cf0c077555b2d4b2530307eac17",
+      "src": "https://github.com/bluz71/vim-moonfly-colors"
+    },
+    "vim-nightfly-colors": {
+      "rev": "66050453bf40ac7eddc7a84dd15291db85fefc43",
+      "src": "https://github.com/bluz71/vim-nightfly-colors"
+    },
     "vim-one": {
       "rev": "187f5c85b682c1933f8780d4d419c55d26a82e24",
       "src": "https://github.com/rakr/vim-one"
+    },
+    "vim-tomorrow-theme": {
+      "rev": "fd25d3be7558b9f9533837f25d7b31d31438287b",
+      "src": "https://github.com/chriskempson/vim-tomorrow-theme"
     },
     "vim-winteriscoming": {
       "rev": "84cf33abb4eda6ba6cd2a039bb172c7d1f93380e",

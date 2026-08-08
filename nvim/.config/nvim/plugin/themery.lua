@@ -30,6 +30,9 @@ vim.pack.add({
 	{src = "https://github.com/mhartington/oceanic-next"},
 	{src = "https://github.com/olimorris/onedarkpro.nvim"},
 	{src = "https://github.com/srcery-colors/srcery-vim"},
+	{src = "https://github.com/chriskempson/tomorrow-theme"},
+	{src = "https://github.com/bluz71/vim-nightfly-colors"},
+	{src = "https://github.com/bluz71/vim-moonfly-colors"},
 })
  local my_themes = {
 			"lucario",
@@ -71,6 +74,12 @@ vim.pack.add({
 			"onedark",
 			"onedark_vivid",
 			"onedark_dark",
+			"Tomorrow-Night",
+			"Tomorrow-Night-Bright",
+			"Tomorrow-Night-Blue",
+			"Tomorrow-Night-Eighties",
+			"nightfly",
+			"moonfly",
 		}
 require("themery").setup({
 	themes = my_themes,
