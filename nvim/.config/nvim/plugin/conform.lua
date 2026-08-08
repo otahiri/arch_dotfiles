@@ -11,6 +11,12 @@ require("conform").setup({
         python = { "isort", "black" },
         rust = { "rustfmt", lsp_format = "fallback" },
     },
+    formatters = {
+	    black = {
+
+	    prepend_args = { "--line-length", "79" },
+	}
+    }
 })
 
 vim.keymap.set({ "n", "x" }, "<leader>cf", function() require("conform").format({ async = true, timeout_ms = 3000 }) end, {desc =  "Format Injected Langs"})
