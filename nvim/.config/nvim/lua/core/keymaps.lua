@@ -27,3 +27,7 @@ end, { desc = "show signature" })
 vim.keymap.set("n", "<leader>cd", function ()
 	vim.diagnostic.open_float(nil, {focus = true})
 end, { desc = "go to declaration" })
+
+vim.keymap.set("n", "<leader>fn", function ()
+	vim.cmd("silent! tab new")
+end, {desc = "new empty file"})
