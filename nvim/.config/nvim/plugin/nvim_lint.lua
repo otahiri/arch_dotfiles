@@ -3,7 +3,6 @@ vim.pack.add({
 })
 require("lint").linters_by_ft = {
 	python = {"flake8", "mypy"},
-	c = {"norminette"}
 }
 
 vim.api.nvim_create_autocmd({"BufWritePost", "BufReadPost", "InsertLeave"},
