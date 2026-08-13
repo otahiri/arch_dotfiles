@@ -221,12 +221,10 @@ hl.config({
     },
 })
 
-hl.config({
-	exec_once = {
-		"hypridle",
-		"hyprlock",
-	},
-})
+hl.on("hyprland.start", function ()
+	hl.exec_cmd("hyprlock")
+	hl.exec_cmd("hypridle")
+end)
 
 --############
 
@@ -291,6 +289,7 @@ hl.bind(mainMod .. " + " .. "Space", hl.dsp.exec_cmd("rofi -show drun"))
 -- hl.bind(mainMod .. " + " .. "P", hl.dsp.window.pseudo())
 
 hl.bind(mainMod .. " + " .. "P", hl.dsp.exec_cmd("hyprpicker"))
+hl.bind(mainMod .. " + " .. "L", hl.dsp.exec_cmd("hyprlock"))
 
 -- dwindle
 

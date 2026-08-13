@@ -13,9 +13,11 @@ require("conform").setup({
     },
     formatters = {
 	    black = {
-
 	    prepend_args = { "--line-length", "79", "--target-version", "py310" },
-	}
+	},
+	c_formatter_42 = {
+		command = "c_formatter_42",
+	},
     }
 })
 
