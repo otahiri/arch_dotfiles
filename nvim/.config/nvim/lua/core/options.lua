@@ -38,6 +38,8 @@ vim.lsp.config['pyright'] = {
 
 }
 vim.lsp.enable('pyright')
+
+
 vim.diagnostic.config({
   virtual_text = {
     spacing = 4,
@@ -61,3 +63,6 @@ vim.diagnostic.config({
 		source = true,
 	},
 })
+
+
+
