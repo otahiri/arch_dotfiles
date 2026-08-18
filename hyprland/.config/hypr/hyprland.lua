@@ -282,6 +282,8 @@ hl.bind(mainMod .. " + " .. "M", hl.dsp.exit())
 
 hl.bind(mainMod .. " + " .. "E", hl.dsp.exec_cmd("dolphin"))
 
+hl.bind(mainMod .. " + " .. "B", hl.dsp.exec_cmd("librewolf"))
+
 hl.bind(mainMod .. " + " .. "V", hl.dsp.window.float())
 
 hl.bind(mainMod .. " + " .. "Space", hl.dsp.exec_cmd("rofi -show drun"))
