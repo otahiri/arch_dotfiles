@@ -222,6 +222,9 @@ hl.config({
 })
 
 hl.on("hyprland.start", function ()
+	hl.exec_cmd("gromit-mpx")
+end)
+hl.on("hyprland.start", function ()
 	hl.exec_cmd("hyprlock")
 	hl.exec_cmd("hypridle")
 end)
@@ -276,7 +279,19 @@ local mainMod = "SUPER"
 
 hl.bind("SUPER" .. " + " .. "T", hl.dsp.exec_cmd("alacritty"))
 
-hl.bind(mainMod .. " + " .. "W", hl.dsp.window.close())
+hl.bind("SUPER" .. " + " .. "D", hl.dsp.exec_cmd("wayscriber --daemon-toggle"))
+
+hl.bind("SUPER + SHIFT" .. " + " .. "D", hl.dsp.exec_cmd("wayscriber --daemon-toggle --freeze"))
+
+hl.bind("SUPER + ALT" .. " + " .. "L", hl.dsp.exec_cmd("wayscriber --light-toggle"))
+
+hl.bind("SUPER + ALT" .. " + " .. "D", hl.dsp.exec_cmd("wayscriber --light-draw-toggle"))
+
+hl.bind("SUPER + ALT" .. " + " .. "F", hl.dsp.exec_cmd("wayscriber --light-draw-on"))
+
+hl.bind("SUPER + ALT" .. " + " .. "F", hl.dsp.exec_cmd("wayscriber --light-draw-off"), { repeating = true })
+
+hl.bind("ALT" .. " + " .. "F4", hl.dsp.window.close())
 
 hl.bind(mainMod .. " + " .. "M", hl.dsp.exit())
 
@@ -288,7 +303,10 @@ hl.bind(mainMod .. " + " .. "V", hl.dsp.window.float())
 
 hl.bind(mainMod .. " + " .. "Space", hl.dsp.exec_cmd("rofi -show drun"))
 
--- hl.bind(mainMod .. " + " .. "P", hl.dsp.window.pseudo())
+hl.bind(mainMod .. " + " .. "G", hl.dsp.exec_cmd("~/arch_dotfiles/hyprland/.config/hypr/screen_paint.sh"))
+
+
+hl.bind(mainMod .. " + " .. "P", hl.dsp.exec_cmd("hyprpicker"))
 
 hl.bind(mainMod .. " + " .. "P", hl.dsp.exec_cmd("hyprpicker"))
 hl.bind(mainMod .. " + " .. "L", hl.dsp.exec_cmd("hyprlock"))
@@ -440,11 +458,11 @@ hl.window_rule({
     },
     -- TODO: review rule: "match:class ^$"
 })
-
 -- Autostart
 hl.on("hyprland.start", function()
     hl.exec_cmd("nm-applet &")
     hl.exec_cmd("waybar &")
+    hl.exec_cmd("wayscriber --daemon")
     hl.exec_cmd("awww-daemon")
     hl.exec_cmd("sleep 1 && ~/arch_dotfiles/hyprland/.config/hypr/wallpapercycle.sh")
 end)
