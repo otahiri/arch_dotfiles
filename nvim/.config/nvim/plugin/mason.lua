@@ -5,5 +5,5 @@ vim.pack.add({
 
 require("mason").setup()
 require("mason-lspconfig").setup({
-	ensure_installed = {"lua_ls", "bashls", "pyright", "rust_analyzer", "qmlls"},
+	ensure_installed = {"lua_ls", "bashls", "ty", "rust_analyzer", "qmlls"},
 })

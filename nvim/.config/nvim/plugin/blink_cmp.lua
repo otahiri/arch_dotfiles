@@ -18,7 +18,7 @@ require("blink.cmp").setup({
 	},
 
 	completion = {
-		documentation = { auto_show = false, auto_show_delay_ms = 500 },
+		documentation = { auto_show = false, auto_show_delay_ms = 100 },
 		trigger = {
 			show_on_insert_on_trigger_character = true,
 		},

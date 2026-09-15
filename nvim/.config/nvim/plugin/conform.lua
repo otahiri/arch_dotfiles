@@ -10,6 +10,8 @@ require("conform").setup({
         lua = { "stylua" },
         python = { "black", "isort" },
         rust = { "rustfmt", lsp_format = "fallback" },
+	htmldjango = {"djlint"},
+	html = {"prettier"},
     },
     formatters = {
 	    black = {

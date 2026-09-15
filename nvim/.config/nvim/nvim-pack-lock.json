@@ -57,6 +57,10 @@
       "rev": "5d15b2765f59754d7ac263c88a0f6e3e58124951",
       "src": "https://github.com/morhetz/gruvbox"
     },
+    "hexed.nvim": {
+      "rev": "3ddd8f0ce9a0daa3e3586c0c3be2412b25e46fe3",
+      "src": "https://github.com/johk06/hexed.nvim"
+    },
     "iceberg.nvim": {
       "rev": "15070f77066fce582f5fae09ce4faa080c33aefd",
       "src": "https://github.com/oahlen/iceberg.nvim"
