@@ -31,3 +31,27 @@ end, { desc = "go to declaration" })
 vim.keymap.set("n", "<leader>fn", function ()
 	vim.cmd("silent! tab new")
 end, {desc = "new empty file"})
+
+vim.keymap.set({"n", "v", "i"}, "<F1>", "")
+vim.keymap.set("n","<leader>ce",
+	function ()
+		local current_dir = vim.fn.expand("%:p:h")
+		local markers = {"pyproject.toml", "src/__init__.py", "src/__main__.py"}
+		local match = vim.fs.find(markers, {upward = true, stop = vim.env.HOME, path = current_dir})
+		if #match == 0 then
+			vim.notify("no a python project", vim.log.levels.WARN)
+			return
+		end
+		local project_root = vim.fs.dirname(match[1])
+		vim.notify("running python project", vim.log.levels.INFO)
+		vim.system({"make", "-C", project_root}, {text = true},
+			function (result)
+				vim.schedule(
+					function ()
+						local err_msg = result.stderr ~= "" and result.stderr
+						vim.fn.confirm("[ERROR]\n" .. err_msg, "&OK", 1, "Warning")
+						vim.notify("[LOG]\n" .. result.stdout, vim.log.levels.INFO, {timeout = 2000})
+				end)
+			end
+		)
+	end , {desc = "run python project if in a python project dir"})

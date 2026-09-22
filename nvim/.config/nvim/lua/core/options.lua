@@ -63,6 +63,3 @@ vim.diagnostic.config({
 		source = true,
 	},
 })
-
-
-

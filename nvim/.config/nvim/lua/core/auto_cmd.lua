@@ -12,3 +12,12 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.keymap.set("n", "<CR>","<CR><cmd>cclose<CR>", {buffer = true, silent = true})
 	end
 })
+
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = {"markdown", "md"},
+	callback = function ()
+		vim.opt_local.spell = true
+		vim.opt_local.spelllang = "en_us"
+	end,
+})

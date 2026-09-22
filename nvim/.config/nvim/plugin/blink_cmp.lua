@@ -1,5 +1,6 @@
 vim.pack.add({
 	{src = "https://github.com/saghen/blink.cmp.git"},
+	{src = "https://github.com/archie-judd/blink-cmp-words"},
 })
 require("blink.cmp").setup({
 	keymap = {
@@ -38,6 +39,14 @@ require("blink.cmp").setup({
 					end
 					return items
 				end,
+			},
+			dictionary = {
+				name = "blink-cmp-words",
+				module = "blink-cmp-words.dictionary",
+				opts = {
+					min_keyword_lenght = 3,
+				},
+
 			},
 		},
 	},
