@@ -170,6 +170,10 @@
       "rev": "781bb844aae0bcec2763b23a4c7d3cc6aede780c",
       "src": "https://github.com/rose-pine/rose-pine-theme"
     },
+    "smear-cursor.nvim": {
+      "rev": "f63ff221158b5b0ca9de1d7d1ff2e0dce5649614",
+      "src": "https://github.com/sphamba/smear-cursor.nvim"
+    },
     "snacks.nvim": {
       "rev": "882c996cf28183f4d63640de0b4c02ec886d01f2",
       "src": "https://github.com/folke/snacks.nvim.git"
