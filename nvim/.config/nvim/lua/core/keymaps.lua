@@ -48,8 +48,10 @@ vim.keymap.set("n","<leader>ce",
 			function (result)
 				vim.schedule(
 					function ()
-						local err_msg = result.stderr ~= "" and result.stderr
-						vim.fn.confirm("[ERROR]\n" .. err_msg, "&OK", 1, "Warning")
+						local err_msg = result.stderr
+						if result.stderr then
+							vim.fn.confirm("ERROR\n" .. err_msg, "&OK", 1, "Warning")
+						end
 						vim.notify("[LOG]\n" .. result.stdout, vim.log.levels.INFO, {timeout = 2000})
 				end)
 			end
