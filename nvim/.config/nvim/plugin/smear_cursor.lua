@@ -8,4 +8,6 @@ require('smear_cursor').setup({
     	scroll_buffer_space = true,
     	legacy_computing_symbols_support = false,
     	smear_insert_mode = true,
+	particles_enabled = true,
+	never_draw_over_target = true
 })

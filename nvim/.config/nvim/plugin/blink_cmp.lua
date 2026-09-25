@@ -1,6 +1,6 @@
 vim.pack.add({
 	{src = "https://github.com/saghen/blink.cmp.git"},
-	{src = "https://github.com/archie-judd/blink-cmp-words"},
+	{src = "https://github.com/ribru17/blink-cmp-spell"},
 })
 require("blink.cmp").setup({
 	keymap = {
@@ -27,6 +27,10 @@ require("blink.cmp").setup({
 
 	sources = {
 		default = { "lsp", "path", "snippets", "buffer" },
+		per_filetype = {
+			markdown = {"spell","buffer", "path"},
+			text = {"spell", "buffer"},
+		},
 		providers = {
 			lsp = {
 				transform_items = function(_, items)
@@ -40,13 +44,12 @@ require("blink.cmp").setup({
 					return items
 				end,
 			},
-			dictionary = {
-				name = "blink-cmp-words",
-				module = "blink-cmp-words.dictionary",
+			spell = {
+				name = "Spell",
+				module = "blink-cmp-spell",
 				opts = {
-					min_keyword_lenght = 3,
+					max_entries = 5,
 				},
-
 			},
 		},
 	},

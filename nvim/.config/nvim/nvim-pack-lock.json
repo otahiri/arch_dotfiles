@@ -9,6 +9,10 @@
       "rev": "fd25d3be7558b9f9533837f25d7b31d31438287b",
       "src": "https://github.com/chriskempson/tomorrow-theme"
     },
+    "blink-cmp-spell": {
+      "rev": "2bd0e0d5e7735c047e72b6918a0458f3e8fadaba",
+      "src": "https://github.com/ribru17/blink-cmp-spell"
+    },
     "blink-cmp-words": {
       "rev": "d6a56f532a1826b4f3aeed4d5e2fe7b8743a9244",
       "src": "https://github.com/archie-judd/blink-cmp-words"
