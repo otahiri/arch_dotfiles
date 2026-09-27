@@ -52,7 +52,7 @@ vim.keymap.set("n","<leader>ce",
 						if result.stderr then
 							vim.fn.confirm("ERROR\n" .. err_msg, "&OK", 1, "Warning")
 						end
-						vim.notify("[LOG]\n" .. result.stdout, vim.log.levels.INFO, {timeout = 2000})
+						vim.notify("[LOG]\n" .. result.stdout, vim.log.levels.INFO, {timeout = 5000})
 				end)
 			end
 		)

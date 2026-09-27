@@ -1,5 +1,5 @@
 [window]
-opacity = 0.6
+opacity = 1
 startup_mode = "Fullscreen"
 [font]
 
@@ -11,3 +11,5 @@ style = "Regular"
 
 [terminal]
 shell = "zellij"
+[general]
+import = ["~/arch_dotfiles/alacritty/.config/alacritty/themes/themes/tokyo_night_storm.toml" ]
