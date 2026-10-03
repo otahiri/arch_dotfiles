@@ -8,7 +8,7 @@ require("conform").setup({
         cpp = { "c_formatter_42" },
         hpp = { "c_formatter_42" },
         lua = { "stylua" },
-        python = { "black", "isort" },
+        python = { "uv", "run", "black", "isort" },
         rust = { "rustfmt", lsp_format = "fallback" },
 	htmldjango = {"djlint"},
 	html = {"prettier"},
