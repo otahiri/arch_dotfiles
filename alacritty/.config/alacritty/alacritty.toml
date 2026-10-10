@@ -12,4 +12,6 @@ style = "Regular"
 [terminal]
 shell = "zellij"
 [general]
-import = ["~/arch_dotfiles/alacritty/.config/alacritty/themes/tokyo_night_storm.toml" ]
+import = ["~/arch_dotfiles/alacritty/.config/alacritty/themes/gruber_dark.toml" ]
+
+

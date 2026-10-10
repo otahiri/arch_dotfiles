@@ -37,6 +37,7 @@ hl.monitor({
     scale    = "auto",
 })
 
+
 --##################
 
 --## MY PROGRAMS ###
@@ -47,7 +48,7 @@ hl.monitor({
 
 -- Set programs that you use
 
-local terminal = "kitty"
+local terminal = "alacritty"
 
 local fileManager = "dolphin"
 
@@ -227,6 +228,7 @@ end)
 hl.on("hyprland.start", function ()
 	hl.exec_cmd("hyprlock")
 	hl.exec_cmd("hypridle")
+	hl.exec_cmd("alacritty")
 end)
 
 --############
@@ -239,7 +241,11 @@ end)
 
 hl.config({
     input = {
-        kb_layout = "us",
+	kb_layout = "us,graphite",
+    	kb_variant = "",
+    	kb_model = "",
+    	kb_options = "grp:alt_shift_toggle",
+    	kb_rules = "",
         follow_mouse = 1,
         sensitivity = 0,
         -- -1.0 - 1.0, 0 means no modification.
@@ -262,6 +268,7 @@ hl.device({
     name = "epic-mouse-v1",
     sensitivity = -0.5,
 })
+
 
 --##################
 
