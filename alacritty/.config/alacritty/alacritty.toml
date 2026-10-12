@@ -12,6 +12,8 @@ style = "Regular"
 [terminal]
 shell = "zellij"
 [general]
-import = ["~/arch_dotfiles/alacritty/.config/alacritty/themes/gruber_dark.toml" ]
+import = ["~/arch_dotfiles/alacritty/.config/alacritty/themes/catppuccin.toml" ]
+
+
 
 

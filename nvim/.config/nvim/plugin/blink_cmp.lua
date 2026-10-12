@@ -4,7 +4,7 @@ vim.pack.add({
 })
 require("blink.cmp").setup({
 	keymap = {
-		preset = "none",
+		preset = "default",
 		["<CR>"] = {
 			function(cmp)
 				if cmp.is_visible() then
@@ -13,9 +13,6 @@ require("blink.cmp").setup({
 			end,
 			"fallback",
 		},
-		['<C-n>'] = {"show", "select_next", "fallback"},
-		['<C-p>'] = {"select_prev", "fallback"},
-		['<C-e>'] = {"hide", "fallback"},
 
 	},
 	appearance = {
@@ -23,9 +20,6 @@ require("blink.cmp").setup({
 	},
 
 	completion = {
-		menu = {
-			auto_show = false,
-		},
 		documentation = { auto_show = false, auto_show_delay_ms = 100 },
 		trigger = {
 			show_on_insert_on_trigger_character = true,
