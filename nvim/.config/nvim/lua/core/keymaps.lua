@@ -57,3 +57,12 @@ vim.keymap.set("n","<leader>ce",
 			end
 		)
 	end , {desc = "run python project if in a python project dir"})
+
+vim.keymap.set("n", "<F1>", function ()
+	local prefix = vim.fn.expand("%:e")
+	if prefix == "c" or prefix == "h" then
+		vim.cmd("Stdheader")
+	else
+		vim.cmd("help")
+	end
+end)

@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "42-header.nvim": {
+      "rev": "213eed395eebe317700800daf26f476a8c94989c",
+      "src": "https://github.com/Diogo-ss/42-header.nvim"
+    },
     "LuaSnip": {
       "rev": "642b0c595e11608b4c18219e93b88d7637af27bc",
       "src": "https://github.com/L3MON4D3/LuaSnip",
