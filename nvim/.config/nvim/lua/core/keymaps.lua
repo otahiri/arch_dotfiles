@@ -66,3 +66,5 @@ vim.keymap.set("n", "<F1>", function ()
 		vim.cmd("help")
 	end
 end)
+
+vim.keymap.set("n", "<leader>bd", function () vim.cmd("bd") end, {desc = "delete current buffer"})

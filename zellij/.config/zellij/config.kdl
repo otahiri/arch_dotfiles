@@ -293,7 +293,7 @@ web_client {
 // Choose the theme that is specified in the themes section.
 // Default: default
 // 
-theme "catppuccin-mocha"
+theme "gruvbox-dark"
  
 // Choose the base input mode of zellij.
 // Default: normal
@@ -322,7 +322,7 @@ default_layout "compact_top"
 // The folder in which Zellij will look for themes
 // (Requires restart)
 // 
-// theme_dir "/tmp"
+ // theme_dir "~/arch_dotfiles/alacritty/.config/alacritty/themes/"
  
 // Toggle enabling the mouse mode.
 // On certain configurations, or terminals this could
@@ -541,3 +541,4 @@ show_startup_tips false
 // can be useful for removing wrappers around commands
 // Note: be sure to escape backslashes and similar characters properly
 // post_command_discovery_hook "echo $RESURRECT_COMMAND | sed <your_regex_here>"
+
