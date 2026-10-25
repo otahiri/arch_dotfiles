@@ -9,10 +9,8 @@ size = 14.0
 family = "Iosevka Nerd Font Mono"
 style = "Regular"
 
-[terminal]
-shell = "zellij"
 [general]
-import = ["~/arch_dotfiles/alacritty/.config/alacritty/themes/gruvbox_dark.toml.toml" ]
+import = ["~/arch_dotfiles/alacritty/.config/alacritty/themes/tokyo_night_storm.toml" ]
 
 
 

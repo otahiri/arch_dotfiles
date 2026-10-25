@@ -27,8 +27,8 @@ end
 vim.keymap.set('n', "<C- >", function ()
 	local show = get_show_state()
 	set_show_state(not show)
-	local status = show and "ON" or "OFF"
-	vim.notify("toggled auto_complete auto show ".. status)
+	local status = show and "OFF" or "ON"
+	vim.notify("toggled blink auto show ".. status)
 end, {desc = "toggled blink auto complete auto show on and off"})
 
 require("blink.cmp").setup({
@@ -95,3 +95,55 @@ require("blink.cmp").setup({
 
 	signature = { enabled = true },
 })
+
+local capabilities = require('blink.cmp').get_lsp_capabilities()
+
+vim.lsp.config['clangd'] = {
+	cmd  = {'clangd', '--background-index'},
+	filetypes = {'c', 'h', 'cpp', 'hpp', 'objc', 'objcpp'},
+	root_markers = {'Makefile', '.git'},
+	capabilities = capabilities,
+}
+
+vim.lsp.enable('clangd')
+
+
+vim.lsp.config['lua_ls'] = {
+  cmd = { 'lua_ls' },
+  filetypes = { 'lua' },
+  root_markers = { { '.emmyrc.json', '.luarc.json' }, '.git' },
+  settings = {
+	Lua = {
+	      runtime = {
+		version = 'LuaJIT',
+	      },
+      }
+  },
+	capabilities = capabilities,
+
+}
+vim.lsp.enable('lua_ls')
+
+vim.lsp.config['pyright'] = {
+
+
+  cmd = { 'pyright-langserver', '--stdio' },
+
+  filetypes = { 'python' },
+
+  root_markers = { 'pyproject.toml', '.git' },
+  capabilities = capabilities,
+
+
+  settings = {
+	python = {
+		    analysis = {
+			typeCheckingMode = "basic",
+			autoSearchPaths = true,
+			useLibraryCodeForTypes = true,
+		    }
+		}
+	}
+
+}
+vim.lsp.enable('pyright')
