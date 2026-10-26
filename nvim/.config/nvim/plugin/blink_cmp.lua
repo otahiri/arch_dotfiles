@@ -4,7 +4,7 @@ vim.pack.add({
 })
 
 
-local show_state = "/tmp/show_state"
+local show_state = vim.fn.stdpath("data") .. "/show_state"
 local function set_show_state(state)
 	local f = io.open(show_state, "w")
 	if f then
